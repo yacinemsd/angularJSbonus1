@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+ <html lang="fr" dir="ltr" >
+  <head>
+    <meta charset="utf-8">
+     <title>bonusEx1</title>
+      <link href="main.css" />
+  </head>
+
+     <body ng-app>
+       <form name="myForm" novalidate> Email:
+         <input type="text" name="email" ng-model="txtmail" ng-pattern="/^[^\s@]+@[^\s@]+.[^\s@]{2,}$/" required />
+         <div style="color:green" ng-show="myForm.email.$dirty&&myForm.email.$valid">OK</div>
+         <div style="color:Red" ng-show="myForm.email.$dirty&&myForm.email.$error.pattern">Saisie e-mail incorrecte</div>
+
+         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+         <script src="script.js"></script>
+      </body>
+  </html>
